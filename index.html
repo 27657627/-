@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>篝火潮牌铺 应用下载</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- 配置Tailwind自定义主题 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nike: {
+                            red: '#e11d3a',
+                            black: '#000000',
+                            white: '#ffffff',
+                            gray: '#f5f5f5',
+                            darkgray: '#333333'
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-nike-white text-nike-black antialiased">
+    <!-- 导航栏 -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" alt="Nike Logo" class="h-8 md:h-10">
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="text-sm font-medium hover:text-nike-red transition-colors">功能特点</a>
+                <a href="#download" class="text-sm font-medium hover:text-nike-red transition-colors">立即下载</a>
+                <a href="#screenshots" class="text-sm font-medium hover:text-nike-red transition-colors">精选买家秀</a>
+            </nav>
+            <button class="md:hidden text-2xl" id="menuToggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden bg-nike-black text-nike-white hidden" id="mobileMenu">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#features" class="text-sm font-medium py-2 border-b border-gray-700">功能特点</a>
+                <a href="#download" class="text-sm font-medium py-2 border-b border-gray-700">立即下载</a>
+                <a href="#screenshots" class="text-sm font-medium py-2">精选买家秀</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="pt-28 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-nike-gray to-nike-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-tight mb-6">
+                    篝火潮牌铺<br><span class="text-nike-red">潮牌服饰/潮奢礼物/生日礼物/厂家直发</span>
+                </h1>
+                <p class="text-lg md:text-xl text-nike-darkgray mb-8 max-w-lg">
+                爱TA就送TA礼物🎁！便宜不失体面，花点小钱赢TA大好感！    
+
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#download" class="bg-nike-black text-nike-white px-8 py-3 rounded-full font-semibold text-center hover:bg-nike-red transition-colors hover-scale">
+                        <i class="fa fa-download mr-2"></i>立即下载
+                    </a>
+                    <a href="http://a.xn--rhqi60el43iwwb9xx.com/" class="border-2 border-nike-black text-nike-black px-8 py-3 rounded-full font-semibold text-center hover:border-nike-red hover:text-nike-red transition-colors hover-scale">
+                        点击选款
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://img.pxfe.top/v2/6I32tJs.jpeg" alt="Nike App展示" class="rounded-3xl shadow-2xl max-h-[500px] md:max-h-[600px] hover-scale">
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section id="download" class="py-20 bg-nike-black text-nike-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-4">下载 篝火潮牌铺 应用</h2>
+            <p class="text-gray-300 text-lg mb-12 max-w-2xl mx-auto">
+                支持 iOS 和 Android 设备，随时随地享受 篝火潮牌铺 带来的穿搭体验
+            </p>
+            <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
+                <a href="#" class="flex items-center bg-nike-white text-nike-black px-8 py-4 rounded-xl hover:bg-nike-red hover:text-nike-white transition-all hover-scale w-full md:w-auto justify-center">
+                    <i class="fa fa-apple text-3xl mr-4"></i>
+                    <div class="text-left">
+                        <div class="text-xs">点击下载</div>
+                        <div class="font-bold text-lg">苹果 APP</div>
+                    </div>
+                </a>
+                <a href="篝火潮牌铺.apk.1" class="flex items-center bg-nike-white text-nike-black px-8 py-4 rounded-xl hover:bg-nike-red hover:text-nike-white transition-all hover-scale w-full md:w-auto justify-center">
+                    <i class="fa fa-android text-3xl mr-4"></i>
+                    <div class="text-left">
+                        <div class="text-xs">点击下载</div>
+                        <div class="font-bold text-lg">安卓 APP</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能特点 -->
+    <section id="features" class="py-20 bg-nike-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-center mb-4">诚招代理丨一件代发</h2>
+            <p class="text-nike-darkgray text-lg text-center mb-16 max-w-2xl mx-auto">
+                加入我们丨 我们为您提供全方位的支持，一站式服务，助力微商让你有一份不错的副业/主业
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 功能1 -->
+                <div class="bg-nike-gray p-8 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-nike-red rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-heartbeat text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">好评率</h3>
+                    <p class="text-nike-darkgray">
+                        98.65%
+                    </p>
+                </div>
+                
+                <!-- 功能2 -->
+                <div class="bg-nike-gray p-8 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-nike-red rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-calendar-check-o text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">营业时间：周一/周日</h3>
+                    <p class="text-nike-darkgray">
+                        早上10：00--晚上23：00
+                    </p>
+                </div>
+                
+                <!-- 功能3 -->
+                <div class="bg-nike-gray p-8 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-nike-red rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-shopping-bag text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">款式多1000+</h3>
+                    <p class="text-nike-darkgray">
+                        质量好
+                    </p>
+                </div>
+                
+                <!-- 功能4 -->
+                <div class="bg-nike-gray p-8 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-nike-red rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-users text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">购买客户</h3>
+                    <p class="text-nike-darkgray">
+                        3000+
+                    </p>
+                </div>
+                
+                <!-- 功能5 -->
+                <div class="bg-nike-gray p-8 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-nike-red rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-map-marker text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">合作厂家：河北 福建 广州 东莞 浙江 </h3>
+                    <p class="text-nike-darkgray">
+                        50+
+                    </p>
+                </div>
+                
+                <!-- 功能6 -->
+                <div class="bg-nike-gray p-8 rounded-2xl shadow-lg hover-scale">
+                    <div class="w-14 h-14 bg-nike-red rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-trophy text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">成交单量</h3>
+                    <p class="text-nike-darkgray">
+                        5000+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用截图 -->
+    <section id="screenshots" class="py-20 bg-nike-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-center mb-4">精选买家秀</h2>
+            <p class="text-nike-darkgray text-lg text-center mb-16 max-w-2xl mx-auto">
+                参与买家秀精选可以获得1-100元现金红包哦~
+
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img src="https://img.pxfe.top/v2/uHB141S.jpeg" alt="Nike应用截图1" class="rounded-xl shadow-lg w-full h-auto hover-scale">
+                <img src="https://img.pxfe.top/v2/8hewgvR.jpeg" alt="Nike应用截图2" class="rounded-xl shadow-lg w-full h-auto hover-scale">
+                <img src="https://img.pxfe.top/v2/ZoXsoHF.jpeg" alt="Nike应用截图3" class="rounded-xl shadow-lg w-full h-auto hover-scale">
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部CTA -->
+    <section class="py-20 bg-nike-red text-nike-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-6">准备好开始你的购物之旅了吗？</h2>
+            <p class="text-lg mb-10 max-w-2xl mx-auto">
+                下载 “篝火云商城”应用【潮牌服装和鞋子随意搭配各种风格，第一眼让他/她对你一见钟情！】
+            </p>
+            <a href="#download" class="bg-nike-white text-nike-red px-10 py-4 rounded-full font-bold text-lg inline-block hover:bg-nike-black hover:text-nike-white transition-colors hover-scale">
+                <i class="fa fa-download mr-2"></i>立即下载
+            </a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-nike-black text-nike-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" alt="Nike Logo" class="h-8">
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-xl hover:text-nike-red transition-colors"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="text-xl hover:text-nike-red transition-colors"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="text-xl hover:text-nike-red transition-colors"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="text-xl hover:text-nike-red transition-colors"><i class="fa fa-youtube-play"></i></a>
+                </div>
+                <div class="text-sm text-gray-400">
+                    &copy; 2025 篝火. 保留所有权利。
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-nike-white', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-nike-white', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                document.getElementById('mobileMenu').classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
